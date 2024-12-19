@@ -1,0 +1,38 @@
+Jour 1 : L’hystérie de l’historienne ---
+L’historien en chef est toujours présent pour le grand lancement du traîneau de Noël, mais personne ne l’a vu depuis des mois ! Aux dernières nouvelles, il visitait des lieux historiquement importants pour le pôle Nord. un groupe d’historiens chevronnés vous a demandé de les accompagner alors qu’ils vérifient les endroits qu’ils pensent qu’il était le plus susceptible de visiter.
+
+Au fur et à mesure que chaque emplacement est vérifié, ils le marqueront d’une étoile sur leur liste. Ils pensent que l’historien en chef doit être dans l’un des cinquante premiers endroits qu’ils regarderont, donc pour sauver Noël, vous devez les aider à obtenir cinquante étoiles sur leur liste avant que le Père Noël ne décolle le 25 décembre.
+
+Collectez des étoiles en résolvant des énigmes. Deux puzzles seront disponibles chaque jour dans le calendrier de l’Avent ; Le deuxième puzzle est débloqué lorsque vous terminez le premier. Chaque puzzle octroie une étoile. Bonne chance!
+
+Vous n’êtes même pas encore parti que le groupe d’historiens seniors elfiques a déjà rencontré un problème : leur liste d’endroits à vérifier est actuellement vide. Finalement, quelqu’un décide que le meilleur endroit pour vérifier en premier serait le bureau de l’historien en chef.
+
+En affluant dans le bureau, tout le monde confirme que l’historien en chef est effectivement introuvable. Au lieu de cela, les Elfes découvrent un assortiment de notes et de listes de lieux d’importance historique ! Il semble que ce soit la planification que l’historien en chef faisait avant de partir. Peut-être ces notes peuvent-elles être utilisées pour déterminer les lieux à rechercher ?
+
+Dans l’ensemble du bureau du chef, les lieux d’importance historique ne sont pas répertoriés par leur nom, mais par un numéro unique appelé ID de l’emplacement. Pour s’assurer de ne rien manquer, les historiens se divisent en deux groupes, chacun fouillant le bureau et essayant de créer sa propre liste complète d’identifiants de lieu.
+
+Il n’y a qu’un seul problème : en tenant les deux listes côte à côte (votre entrée de puzzle), il devient rapidement clair que les listes ne sont pas très similaires. Peut-être pouvez-vous aider les historiens à réconcilier leurs listes ?
+
+Par exemple:
+
+3   4
+4   3
+2   5
+1   3
+3   9
+3   3
+Peut-être que les listes ne sont décalées que de peu ! Pour le savoir, associez les chiffres et mesurez à quelle distance ils se trouvent. Associez le plus petit nombre de la liste de gauche au plus petit nombre de la liste de droite, puis le deuxième plus petit nombre de gauche au deuxième plus petit nombre de droite, et ainsi de suite.
+
+À l’intérieur de chaque paire, déterminez à quelle distance se trouvent les deux nombres ; Vous devrez additionner toutes ces distances. Par exemple, si vous associez une liste de gauche avec une liste de droite, la distance de séparation est de ; Si vous associez a avec a , la distance qui vous sépare est .374936
+
+Dans l’exemple de liste ci-dessus, les paires et les distances seraient les suivantes :
+
+Le plus petit nombre de la liste de gauche est , et le plus petit nombre de la liste de droite est . La distance entre eux est .132
+Le deuxième plus petit nombre de la liste de gauche est , et le deuxième plus petit nombre de la liste de droite est un autre . La distance entre eux est .231
+Le troisième plus petit nombre dans les deux listes est , donc la distance entre eux est .30
+Les nombres suivants à apparier sont et , une distance de .341
+Les cinquièmes plus petits nombres de chaque liste sont et , une distance de .352
+Enfin, le plus grand nombre de la liste de gauche est , tandis que le plus grand nombre de la liste de droite est ; Ils sont à une certaine distance.495
+Pour trouver la distance totale entre la liste de gauche et la liste de droite, additionnez les distances entre toutes les paires que vous avez trouvées. Dans l’exemple ci-dessus, il s’agit de , une distance totale de !2 + 1 + 0 + 1 + 2 + 511
+
+Vos listes de gauche et de droite contiennent de nombreux ID de lieu. Quelle est la distance totale entre vos listes ?
