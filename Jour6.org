@@ -1,0 +1,180 @@
+--- Jour 6 : Garde Gallivant ---
+Les historiens utilisent à nouveau leur appareil sophistiqué, cette fois pour vous emmener tous au laboratoire de fabrication de prototypes de combinaisons du pôle Nord... en l’an 1518 ! Il s’avère qu’avoir un accès direct à l’histoire est très pratique pour un groupe d’historiens.
+
+Il faut tout de même faire attention aux paradoxes temporels, et il sera donc important d’éviter quiconque à partir de 1518 pendant que les historiens recherchent le chef. Malheureusement, un seul garde patrouille dans cette partie du laboratoire.
+
+Peut-être pouvez-vous déterminer à l’avance où le garde ira afin que les historiens puissent fouiller en toute sécurité ?
+
+Vous commencez par faire une carte (votre entrée de puzzle) de la situation. Par exemple:
+
+....#.....
+.........#
+..........
+..#.......
+.......#..
+..........
+.#..^.....
+........#.
+#.........
+......#...
+La carte montre la position actuelle du garde avec (pour indiquer que le garde est actuellement face vers le haut du point de vue de la carte). Tous les obstacles - caisses, bureaux, réacteurs alchimiques, etc. - sont indiqués par .^#
+
+Les gardes de laboratoire de 1518 suivent un protocole de patrouille très strict qui implique de suivre à plusieurs reprises les étapes suivantes :
+
+S’il y a quelque chose directement devant vous, tournez à droite à 90 degrés.
+Sinon, faites un pas en avant.
+En suivant le protocole ci-dessus, la garde se déplace plusieurs fois jusqu’à ce qu’elle atteigne un obstacle (dans ce cas, une pile de prototypes de combinaisons ratés) :
+
+....#.....
+....^....#
+..........
+..#.......
+.......#..
+..........
+.#........
+........#.
+#.........
+......#...
+Parce qu’il y a maintenant un obstacle devant le garde, elle tourne à droite avant de continuer tout droit dans sa nouvelle direction :
+
+....#.....
+........>#
+..........
+..#.......
+.......#..
+..........
+.#........
+........#.
+#.........
+......#...
+Reaching another obstacle (a spool of several very long polymers), she turns right again and continues downward:
+
+....#.....
+.........#
+..........
+..#.......
+.......#..
+..........
+.#......v.
+........#.
+#.........
+......#...
+This process continues for a while, but the guard eventually leaves the mapped area (after walking past a tank of universal solvent):
+
+....#.....
+.........#
+..........
+..#.......
+.......#..
+..........
+.#........
+........#.
+#.........
+......#v..
+By predicting the guard's route, you can determine which specific positions in the lab will be in the patrol path. Including the guard's starting position, the positions visited by the guard before leaving the area are marked with an :X
+
+....#.....
+....XXXXX#
+....X...X.
+..#.X...X.
+..XXXXX#X.
+..X.X.X.X.
+.#XXXXXXX.
+.XXXXXXX#.
+#XXXXXXX..
+......#X..
+In this example, the guard will visit distinct positions on your map.41
+
+Predict the path of the guard. How many distinct positions will the guard visit before leaving the mapped area?
+
+Your puzzle answer was .4890
+
+--- Part Two ---
+While The Historians begin working around the guard's patrol route, you borrow their fancy device and step outside the lab. From the safety of a supply closet, you time travel through the last few months and record the nightly status of the lab's guard post on the walls of the closet.
+
+Returning after what seems like only a few seconds to The Historians, they explain that the guard's patrol area is simply too large for them to safely search the lab without getting caught.
+
+Fortunately, they are pretty sure that adding a single new obstruction won't cause a time paradox. They'd like to place the new obstruction in such a way that the guard will get stuck in a loop, making the rest of the lab safe to search.
+
+To have the lowest chance of creating a time paradox, The Historians would like to know all of the possible positions for such an obstruction. The new obstruction can't be placed at the guard's starting position - the guard is there right now and would notice.
+
+In the above example, there are only different positions where a new obstruction would cause the guard to get stuck in a loop. The diagrams of these six situations use to mark the new obstruction, to show a position where the guard moves up/down, to show a position where the guard moves left/right, and to show a position where the guard moves both up/down and left/right.6O|-+
+
+Option one, put a printing press next to the guard's starting position:
+
+....#.....
+....+---+#
+....|...|.
+..#.|...|.
+....|..#|.
+....|...|.
+.#.O^---+.
+........#.
+#.........
+......#...
+La deuxième option, placez une pile de prototypes de combinaisons ayant échoué dans le quadrant inférieur droit de la zone cartographiée :
+
+
+....#.....
+....+---+#
+....|...|.
+..#.|...|.
+..+-+-+#|.
+..|.|.|.|.
+.#+-^-+-+.
+......O.#.
+#.........
+......#...
+Troisième option, placez une caisse de tissu prototype de cheminée à côté du bureau debout dans le quadrant inférieur droit :
+
+....#.....
+....+---+#
+....|...|.
+..#.|...|.
+..+-+-+#|.
+..|.|.|.|.
+.#+-^-+-+.
+.+----+O#.
+#+----+...
+......#...
+La quatrième option, placez un rétro-encabulateur alchimique près du coin inférieur gauche :
+
+....#.....
+....+---+#
+....|...|.
+..#.|...|.
+..+-+-+#|.
+..|.|.|.|.
+.#+-^-+-+.
+..|...|.#.
+#O+---+...
+......#...
+La cinquième option, placez plutôt le rétroencabulateur alchimique un peu à droite :
+
+....#.....
+....+---+#
+....|...|.
+..#.|...|.
+..+-+-+#|.
+..|.|.|.|.
+.#+-^-+-+.
+....|.|.#.
+#..O+-+...
+......#...
+Option six, placez un réservoir de colle souveraine juste à côté du réservoir de solvant universel :
+
+....#.....
+....+---+#
+....|...|.
+..#.|...|.
+..+-+-+#|.
+..|.|.|.|.
+.#+-^-+-+.
+.+----++#.
+#+----++..
+......#O..
+Peu importe ce que vous choisissez d’utiliser comme obstacle, tant que vous et les Historiens pouvez le mettre en position sans que le garde ne s’en aperçoive. L’important est d’avoir suffisamment d’options pour que vous puissiez en trouver une qui minimise les paradoxes temporels, et dans cet exemple, il y a différentes positions que vous pouvez choisir.6
+
+Vous devez coincer la garde dans une boucle en ajoutant une seule nouvelle obstruction. Combien de positions différentes pourriez-vous choisir pour cette obstruction ?
+
+Votre réponse à l’énigme était .1995
