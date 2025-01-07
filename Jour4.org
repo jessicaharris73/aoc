@@ -1,0 +1,68 @@
+--- Jour 4 : Recherche de Cérès ---
+« On dirait que le chef n’est pas là. Suivant ! L’un des historiens sort un appareil et appuie sur le seul bouton de celui-ci. Après un bref éclair, vous reconnaissez l’intérieur de la station de surveillance Cérès !
+
+Alors que la recherche du chef se poursuit, un petit elfe qui vit sur la station tire sur votre chemise ; Elle aimerait savoir si vous pourriez l’aider dans sa recherche de mots (votre entrée de puzzle). Elle n’a qu’à trouver un seul mot : .XMAS
+
+Cette recherche de mots permet aux mots d’être horizontaux, verticaux, diagonaux, écrits à l’envers, ou même de chevaucher d’autres mots. C’est un peu inhabituel, cependant, car vous n’avez pas besoin de trouver une seule instance de - vous devez les trouver tous. Voici quelques façons d’apparaître, où des caractères non pertinents ont été remplacés par :XMASXMAS.
+
+
+..X...
+.SAMX.
+.A..A.
+XMAS.S
+.X....
+La recherche de mots réelle sera pleine de lettres à la place. Par exemple:
+
+MMMSXXMASM
+MSAMXMSMSA
+AMXSXMAAMM
+MSAMASMSMX
+XMASAMXAMM
+XXAMMXXAMA
+SMSMSASXSS
+SAXAMASAAA
+MAMMMXMMMM
+MXMXAXMASX
+Dans cette recherche de mots, se produit un total de fois ; Voici à nouveau la même recherche de mots, mais où les lettres qui ne sont impliquées dans aucun ont été remplacées par :XMAS18XMAS.
+
+....XXMAS.
+.SAMXMS...
+...S..A...
+..A.A.MS.X
+XMASAMX.MM
+X.....XA.A
+S.S.S.S.SS
+.A.A.A.A.A
+..M.M.M.MM
+.X.X.XMASX
+Jetez un coup d’œil à la recherche de mots du petit elfe. Combien de fois apparaît-il ?XMAS
+
+Votre réponse à l’énigme était .2464
+
+--- deuxième partie ---
+L’Elfe vous regarde d’un air interrogateur. Avez-vous mal compris le devoir ?
+
+En cherchant les instructions, vous retournez la recherche de mots pour constater qu’il ne s’agit pas vraiment d’un puzzle ; c’est un XMASX-MAS puzzle dans lequel vous êtes censé en trouver deux en forme de . Une façon d’y parvenir est la suivante :MASX
+
+M.S
+.A.
+M.S
+Irrelevant characters have again been replaced with in the above diagram. Within the , each can be written forwards or backwards..XMAS
+
+Here's the same example from before, but this time all of the es have been kept instead:X-MAS
+
+.M.S......
+..A..MSMS.
+.M.S.MAA..
+..A.ASMSM.
+.M.S.M....
+..........
+S.S.S.S.S.
+.A.A.A.A..
+M.M.M.M.M.
+..........
+Dans cet exemple, un apparaît fois.X-MAS9
+
+Retournez la recherche de mots des instructions du côté de la recherche de mots et réessayez. Combien de fois un apparaît-il ?X-MAS
+
+Votre réponse à l’énigme était .1982
