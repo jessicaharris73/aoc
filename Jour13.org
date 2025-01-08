@@ -1,0 +1,74 @@
+--- Jour 13 : Griffe ---
+Prochaine étape : le hall d’un complexe hôtelier sur une île tropicale. Les historiens prennent un moment pour admirer le carrelage hexagonal avant de s’étaler.
+
+Heureusement, il semble que la station dispose d’une nouvelle salle d’arcade ! Peut-être pouvez-vous gagner des prix grâce aux machines à griffes ?
+
+Les machines à griffes ici sont un peu inhabituelles. Au lieu d’un joystick ou de boutons directionnels pour contrôler la griffe, ces machines ont deux boutons étiquetés et . Pire encore, vous ne pouvez pas simplement mettre un jeton et jouer ; Il en coûte 3 jetons pour appuyer sur le bouton et 1 jeton pour appuyer sur le bouton.ABAB
+
+Avec un peu d’expérimentation, vous vous rendez compte que les boutons de chaque machine sont configurés pour déplacer la griffe d’une quantité spécifique vers la droite (le long de l’axe) et d’une quantité spécifique vers l’avant (le long de l’axe) chaque fois que ce bouton est enfoncé.XY
+
+Chaque machine contient un prix ; Pour gagner le prix, la griffe doit être positionnée exactement au-dessus du prix sur les axes et .XY
+
+Vous vous demandez : quel est le plus petit nombre de jetons que vous devriez dépenser pour gagner le plus de prix possible ? Vous assemblez une liste du comportement des boutons de chaque machine et de l’emplacement du prix (votre entrée de puzzle). Par exemple:
+
+Button A: X+94, Y+34
+Button B: X+22, Y+67
+Prize: X=8400, Y=5400
+
+Button A: X+26, Y+66
+Button B: X+67, Y+21
+Prize: X=12748, Y=12176
+
+Button A: X+17, Y+86
+Button B: X+84, Y+37
+Prize: X=7870, Y=6450
+
+Button A: X+69, Y+23
+Button B: X+27, Y+71
+Prize: X=18641, Y=10279
+Cette liste décrit la configuration des boutons et l’emplacement des prix de quatre machines à griffes différentes.
+
+Pour l’instant, ne considérons que la première machine à griffes de la liste :
+
+En appuyant sur le bouton de la machine, les unités à griffes se déplaceraient le long de l’axe et les unités le long de l’axe.A94X34Y
+En appuyant sur le bouton, les unités de griffes se déplaceraient le long de l’axe et les unités le long de l’axe.B22X67Y
+Le prix est situé à , ; Cela signifie qu’à partir de la position initiale de la griffe, elle devrait déplacer exactement les unités le long de l’axe et exactement les unités le long de l’axe pour être parfaitement alignée avec le prix dans cette machine.X=8400Y=54008400X5400Y
+Le moyen le moins cher de gagner le prix est d’appuyer sur les boutons temps et temps des boutons. Cela alignerait la griffe le long de l’axe (parce que ) et le long de l’axe (parce que ). Cela coûterait des jetons pour le A80B40X80*94 + 40*22 = 8400Y80*34 + 40*67 = 540080*3A Presses et pour les presses, un total de jetons.40*1B280
+
+Pour les deuxième et quatrième machines à griffes, il n’y a pas de combinaison de presses A et B qui remportera un prix.
+
+Pour la troisième machine à griffes, le moyen le moins cher de gagner le prix est d’appuyer sur les boutons temps et temps des boutons. Cela coûterait un total de jetons.A38B86200
+
+So, the most prizes you could possibly win is two; the minimum tokens you would have to spend to win all (two) prizes is .480
+
+You estimate that each button would need to be pressed no more than times100 to win a prize. How else would someone be expected to play?
+
+Figure out how to win as many prizes as possible. What is the fewest tokens you would have to spend to win all possible prizes?
+
+Your puzzle answer was .25751
+
+--- Part Two ---
+As you go to win the first prize, you discover that the claw is nowhere near where you expected it would be. Due to a unit conversion error in your measurements, the position of every prize is actually higher on both the and axis!10000000000000XY
+
+Add to the and position of every prize. After making this change, the example above would now look like this:10000000000000XY
+
+Button A: X+94, Y+34
+Button B: X+22, Y+67
+Prize: X=10000000008400, Y=10000000005400
+
+Button A: X+26, Y+66
+Button B: X+67, Y+21
+Prize: X=10000000012748, Y=10000000012176
+
+Button A: X+17, Y+86
+Button B: X+84, Y+37
+Prize: X=10000000007870, Y=10000000006450
+
+Button A: X+69, Y+23
+Button B: X+27, Y+71
+Prize: X=10000000018641, Y=10000000010279
+Désormais, il n’est possible de gagner un prix que sur les deuxième et quatrième machines à griffes. Malheureusement, il faudra bien plus que des presses100 pour ce faire.
+
+À l’aide des coordonnées corrigées des lots, déterminez comment gagner le plus de lots possible. Quel est le minimum de jetons que vous devriez dépenser pour gagner tous les prix possibles ?
+
+Votre réponse à l’énigme était .108528956728655
