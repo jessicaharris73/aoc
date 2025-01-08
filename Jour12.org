@@ -1,0 +1,136 @@
+--- Jour 12 : Groupes de jardin ---
+Pourquoi ne pas chercher l’historien en chef près du jardinier et de son immense ferme ? Il y a beaucoup de nourriture, alors les historiens prennent quelque chose à manger pendant qu’ils cherchent.
+
+Vous êtes sur le point de vous installer près d’un arrangement complexe de parcelles de jardin lorsque des elfes vous demandent si vous pouvez donner un coup de main. Ils aimeraient installer des clôtures autour de chaque région des parcelles de jardin, mais ils n’arrivent pas à déterminer la quantité de clôture qu’ils doivent commander ou combien cela coûtera. Ils vous remettent une carte (votre entrée de puzzle) des parcelles de jardin.
+
+Chaque parcelle de jardin ne cultive qu’un seul type de plante et est indiquée par une seule lettre sur votre carte. Lorsque plusieurs parcelles de jardin cultivent le même type de plante et se touchent (horizontalement ou verticalement), elles forment une région. Par exemple:
+
+AAAA
+BBCD
+BBCC
+EEEC
+Cet arrangement 4x4 comprend des parcelles de jardin cultivant cinq types de plantes différentes (étiquetées , , , , et ), chacune regroupée dans sa propre région.ABCDE
+
+Afin de calculer avec précision le coût de la clôture autour d’une seule région, vous devez connaître la superficie et le périmètre de cette région.
+
+La superficie d’une région est simplement le nombre de parcelles de jardin qu’elle contient. Le type de la carte ci-dessus, , et les plantes se trouvent chacune dans une région de zone . Les plantes types se trouvent dans une région de zone ; Les plantes types sont dans une région de zone .ABC4E3D1
+
+Chaque parcelle de jardin est carrée et a donc quatre côtés. Le périmètre d’une région est le nombre de côtés des parcelles de jardin de la région qui ne touchent pas une autre parcelle de jardin de la même région. Le type et les plantes se trouvent chacun dans une région avec un périmètre . Le type et les plantes se trouvent chacun dans une région avec un périmètre . La parcelle isolée forme sa propre région avec un périmètre.AC10BE8D4
+
+Indication visuelle des côtés des parcelles de chaque région qui contribuent au périmètre à l’aide de et , les périmètres des régions de la carte ci-dessus sont mesurés comme suit :-|
+
++-+-+-+-+
+|A A A A|
++-+-+-+-+     +-+
+              |D|
++-+-+   +-+   +-+
+|B B|   |C|
++   +   + +-+
+|B B|   |C C|
++-+-+   +-+ +
+          |C|
++-+-+-+   +-+
+|E E E|
++-+-+-+
+Des plantes du même type peuvent apparaître dans plusieurs régions distinctes, et des régions peuvent même apparaître dans d’autres régions. Par exemple:
+
+OOOOO
+OXOXO
+OOOOO
+OXOXO
+OOOOO
+The above map contains five regions, one containing all of the garden plots, and the other four each containing a single plot.OX
+
+The four regions each have area and perimeter . The region containing type plants is more complicated; in addition to its outer edge contributing a perimeter of , its boundary with each region contributes an additional to its perimeter, for a total perimeter of .X1421O20X436
+
+Due to "modern" business practices, the price of fence required for a region is found by multiplying that region's area by its perimeter. The total price of fencing all regions on a map is found by adding together the price of fence for every region on the map.
+
+In the first example, region has price , region has price , region has price , region has price , and region has price . So, the total price for the first example is .A4 * 10 = 40B4 * 8 = 32C4 * 10 = 40D1 * 4 = 4E3 * 8 = 24140
+
+In the second example, the region with all of the plants has price , and each of the four smaller regions has price , for a total price of ().O21 * 36 = 756X1 * 4 = 4772756 + 4 + 4 + 4 + 4
+
+Here's a larger example:
+
+RRRRIICCFF
+RRRRIICCCF
+VVRRRCCFFF
+VVRCCCJFFF
+VVVVCJJCFE
+VVIVCCJJEE
+VVIIICJJEE
+MIIIIIJJEE
+MIIISIJEEE
+MMMISSJEEE
+It contains:
+
+A region of plants with price .R12 * 18 = 216
+A region of plants with price .I4 * 8 = 32
+A region of plants with price .C14 * 28 = 392
+A region of plants with price .F10 * 18 = 180
+A region of plants with price .V13 * 20 = 260
+A region of plants with price .J11 * 20 = 220
+A region of plants with price .C1 * 4 = 4
+A region of plants with price .E13 * 18 = 234
+A region of plants with price .I14 * 22 = 308
+A region of plants with price .M5 * 12 = 60
+A region of plants with price .S3 * 8 = 24
+So, it has a total price of .1930
+
+What is the total price of fencing all regions on your map?
+
+Your puzzle answer was .1396562
+
+--- deuxième partie ---
+Heureusement, les elfes essaient de commander tellement de clôtures qu’ils peuvent bénéficier d’une remise sur le volume !
+
+Dans le cadre de la remise sur volume, au lieu d’utiliser le périmètre pour calculer le prix, vous devez utiliser le nombre de côtés de chaque région. Chaque section droite de la clôture compte comme un côté, quelle que soit sa longueur.
+
+Reprenons cet exemple :
+
+AAAA
+BBCD
+BBCC
+EEEC
+La région contenant des plantes de type a des côtés, de même que chacune des régions contenant des plantes de type , et . Cependant, la région plus complexe contenant les plantes de type a des côtés !A4BDEC8
+
+En utilisant la nouvelle méthode de calcul du prix par région en multipliant la superficie de la région par son nombre de côtés, les régions ont respectivement des prix , , , et , pour un prix total de .AE16163241280
+
+Le deuxième exemple ci-dessus (plein de types et de plantes) aurait un prix total de .XO436
+
+Voici une carte qui comprend une région en forme de E pleine de plantes types :E
+
+EEEEE
+EXXXX
+EEEEE
+EXXXX
+EEEEE
+La région en forme de E a une aire de et des côtés pour un prix de . En incluant les deux régions pleines de plantes types, cette carte a un prix total de .1712204X236
+
+Cette carte a un prix total de :368
+
+AAAAAA
+AAABBA
+AAABBA
+ABBAAA
+ABBAAA
+AAAAAA
+Il comprend deux régions pleines de plantes types (chacune avec des côtés) et une seule région pleine de plantes types (avec des côtés à l’extérieur et plus de côtés à l’intérieur, un total de côtés). Soyez particulièrement prudent lorsque vous comptez la clôture autour de régions comme celle pleine de plantes types ; En particulier, chaque section de la clôture a un côté intérieur et un côté extérieur, de sorte que la clôture ne se connecte pas au milieu de la région (où les deux régions se touchent en diagonale). (Les Elfes auraient utilisé la compagnie d’escrime Möbius à la place, mais leurs conditions contractuelles étaient trop unilatérales.)B4A4812AB
+
+L’exemple plus grand d’avant a maintenant les prix mis à jour suivants :
+
+Une région de plantes à prix .R12 * 10 = 120
+Une région de plantes à prix .I4 * 4 = 16
+Une région de plantes à prix .C14 * 22 = 308
+Une région de plantes à prix .F10 * 12 = 120
+Une région de plantes à prix .V13 * 10 = 130
+Une région de plantes à prix .J11 * 12 = 132
+Une région de plantes à prix .C1 * 4 = 4
+Une région de plantes à prix .E13 * 8 = 104
+Une région de plantes à prix .I14 * 16 = 224
+Une région de plantes à prix .M5 * 6 = 30
+Une région de plantes à prix .S3 * 6 = 18
+En additionnant ces éléments, on obtient son nouveau prix total de .1206
+
+Quel est le nouveau prix total de la clôture de toutes les régions sur votre carte ?
+
+Votre réponse à l’énigme était .844132
